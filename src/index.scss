@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 // START FLEXBOX MIXINS
 
 @mixin center-content {
@@ -152,3 +148,58 @@
     opacity: 1;
   }
 }
+$mobileScreen: 768px;
+$microScreen: 460px;
+$tabletScreen: 1024px;
+$desktopScreen: 1200px;
+$macroScreen: 1750px;
+
+$microOnly: "(max-width: #{$microScreen})";
+$mobileOnly: "(max-width: #{$mobileScreen})";
+$tabletOnly: "(min-width: #{$mobileScreen + 1}) and (max-width: #{$tabletScreen})";
+$desktopTight: "(min-width: #{$tabletScreen + 1}) and (max-width: #{$desktopScreen})";
+$mobileAndTabletOnly: "(max-width: #{$tabletScreen})";
+$nonDesktop: "(max-width: #{$tabletScreen})";
+$tabletAndLarger: "(min-width: #{$mobileScreen + 1})";
+$desktopAndLarger: "(min-width: #{$tabletScreen + 1})";
+$macroScreens: "(min-width: #{$macroScreen + 1})";
+
+$compWidth: 16;
+$compHeight: 9;
+
+@mixin scale-size($styles: (), $mobileScale: 1) {
+  @each $p, $v in $styles {
+    #{$p}: #{calc($v/$compWidth)}vw;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    @each $p, $v in $styles {
+      #{$p}: #{calc($v/$compHeight)}vh;
+    }
+  }
+
+  @media (max-width: 768px) {
+    @each $p, $v in $styles {
+      #{$p}: #{calc(($v * $mobileScale) / $compHeight)}vw;
+    }
+  }
+}
+
+h1 {
+  font-size: 150%;
+  @media #{$tabletAndLarger} {
+    font-size: 2.5vw;
+  }
+
+
+}
+
+h2 {
+  font-size: 110%;
+  @media #{$tabletAndLarger} {
+    font-size: 1.5vw;
+  }
+
+}
+
+

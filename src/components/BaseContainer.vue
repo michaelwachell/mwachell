@@ -1,5 +1,5 @@
 <template>
-  <div class="force p-10 flex-col w-screen h-screen items-center justify-center bg-blue-300">
+  <div class="force p-10 flex-col w-screen h-screen items-center justify-center">
     <MikeIntro />
   </div>
 </template>
@@ -26,6 +26,9 @@ export default {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background-color: azure;
+  background-image: url('../assets/bg.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 </style>
