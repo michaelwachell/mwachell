@@ -5,13 +5,13 @@
         <!-- <img src="../assets/Mike.jpg" class="me-image" /> -->
       </div>
       <div class="">
-        <h1 class="text-slate-800 mb-10">Hi, My name is <span class="animate-pulse">Mike</span> &#128075;</h1>
+        <h1 class="text-slate-800 mb-10">Hi, my name is <span class="font-bold">Mike</span> &#128075;</h1>
         <blockquote class="text-slate-800">
          <h2>
-           I am a <span class="text-teal-600">leader &#127939;, </span> a <span class="text-teal-600">software
+           I am a <span class="text-teal-600 font-bold">leader &#127939;, </span> a <span class="text-teal-600 font-bold">software
             engineer 	
 &#128187;, </span> and a
-          <span class="text-teal-600">creative &#127925;. </span>
+          <span class="text-teal-600 font-bold">creative &#127925;. </span>
           </h2>
         </blockquote>
       </div>
