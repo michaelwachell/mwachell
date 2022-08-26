@@ -203,3 +203,57 @@ h2 {
 }
 
 
+.fa, .fa-brands {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  @include row-center;
+  border-radius: 50%;
+
+  @media #{$tabletAndLarger} {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+  }
+
+  padding: 20px;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+/* Add a hover effect if you want */
+.fa, .fa-brands:hover {
+  opacity: 0.9;
+  transition: opacity 0.3s linear;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.cpointer {
+  cursor: pointer;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background:  #171515;
+  color: white;
+}
+
+.fa-scroll {
+  background: #148d9f;
+  color: white;
+}

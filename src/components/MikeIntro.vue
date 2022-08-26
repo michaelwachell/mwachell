@@ -1,3 +1,5 @@
+
+
 <template>
   <div class="hero-container  rounded">
     <div class="inner-container">
@@ -7,12 +9,24 @@
       <div class="">
         <h1 class="text-slate-800 mb-10">Hi, my name is <span class="font-bold">Mike</span> &#128075;</h1>
         <blockquote class="text-slate-800">
-         <h2>
-           I am a <span class="text-teal-600 font-bold">leader &#127939;, </span> a <span class="text-teal-600 font-bold">software
-            engineer 	
-&#128187;, </span> and a
-          <span class="text-teal-600 font-bold">creative &#127925;. </span>
+          <h2>
+            I am a <span class="text-teal-600 font-bold">leader &#127939;, </span> a <span
+              class="text-teal-600 font-bold">software
+              engineer
+              &#128187;, </span> and a
+            <span class="text-teal-600 font-bold">creative &#127925;. </span>
           </h2>
+          <div class="links-out">
+            <a class="fa-brands fa-github cpointer"></a>
+            <a class="fa-brands fa-linkedin cpointer"></a>
+            <a class="fa-brands fa-twitter cpointer"></a>
+            <a class="fa fa-solid fa-scroll cpointer jiggle-me"> </a>
+            <!-- <a class="fa-brands fa-github cpointer " v-tooltip="Github"></a>
+                 <a class="fa-brands fa-linkedin cpointer" v-tooltip="LinkedIn"></a>
+                      <a class="fa-brands fa-twitter cpointer" v-tooltip="Twitter"></a>
+                      <a class="fa fa-solid fa-scroll cpointer jiggle-me" v-tooltip="Resume">  </a> -->
+          </div>
+
         </blockquote>
       </div>
       <div>
@@ -25,6 +39,8 @@
 </template>
 
 <script>
+// import {v-tooltip} from 'vue-tooltip';
+
 export default {
   name: 'MikeIntro',
   props: {
@@ -89,10 +105,29 @@ export default {
 
 }
 
+// create animation that spins element once and grows the element one times over 9 seconds
+
+
+.jiggle-me {
+  animation: jiggle 8s linear infinite;
+}
+
 // create a flex row class
+.links-out {
+  @include row-start;
+  width: 100%;
+  margin-top: 40px;
 
+  a {
+    transition: all 0.3s linear;
+    margin-right: 5%;
 
+    &:hover {
+      color: #fff;
+      transform: scale(1.2);
+      transition: all 0.3s linear;
 
-
-.me-image {}
+    }
+  }
+}
 </style>
