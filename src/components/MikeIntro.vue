@@ -17,10 +17,9 @@
             <span class="text-teal-600 font-bold">creative &#127925;. </span>
           </h2>
           <div class="links-out">
-            <a class="fa-brands fa-github cpointer"></a>
-            <a class="fa-brands fa-linkedin cpointer"></a>
-            <a class="fa-brands fa-twitter cpointer"></a>
-            <a class="fa fa-solid fa-scroll cpointer jiggle-me"> </a>
+            <a href="https://github.com/michaelwachell" target="_blank" rel="noopener noreferrer"  class="fa-brands fa-github cpointer"></a>
+            <a href="https://www.linkedin.com/in/mwachell/" class="fa-brands fa-linkedin cpointer" target="_blank" rel="noopener noreferrer" ></a>
+            <a href="./mwachell_cv.pdf" download="download" class="fa fa-solid fa-scroll cpointer jiggle-me"> </a>
             <!-- <a class="fa-brands fa-github cpointer " v-tooltip="Github"></a>
                  <a class="fa-brands fa-linkedin cpointer" v-tooltip="LinkedIn"></a>
                       <a class="fa-brands fa-twitter cpointer" v-tooltip="Twitter"></a>
