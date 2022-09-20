@@ -51,15 +51,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .hero-container {
+  max-height: 650px;
+
   @include row-center;
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 90%;
 
   padding: 20px;
   // background left to right gradient transparent to white
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, #fff);
 
   @media #{$tabletAndLarger} {
+    max-height: 1000px;
+
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, #fff);
     width: 80%;
     height: 60%;
@@ -75,19 +79,21 @@ export default {
 
   @media #{$tabletAndLarger} {
     @include row-evenly;
-
+    width: 100%;
+  height: 100%;
   }
 }
 
 .me-image-container {
   // write a circular clipping mask for this image
-  width: 65vw;
-  height: 60vw;
+  width: 55vw;
+  height: 55vw;
+
 
   @media #{$tabletAndLarger} {
-    width: 30vw;
-    height: 30vw;
-
+    width: 32vw;
+    height: 32vw;
+    margin-right: 20px;
   }
 
   // add thick drop shadow to the image
